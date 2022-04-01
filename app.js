@@ -13,18 +13,24 @@ function playRound(playerSelection, computerSelection) {
     score++;
   } else if (playerSelection === 'scissor' && computerSelection === 'paper') {
     score++;
-  } else {
-    score--;
   }
   return score;
 }
 
 function game() {
   let total = 0;
-  for (let i = 0; i < 4; i++) {
-    total += playRound('scissors', 'scissors');
+  console.log(
+    'if your score is higher or equal to 3, you win. otherwise you lose'
+  );
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt('rock paper scissors', 'rock');
+    total += playRound(playerSelection, computerPlay());
   }
-  return total;
+  if (total > 3) {
+    return `your score is : ${total}/5. you WIN`;
+  } else {
+    return `your score is : ${total}/5. you LOSE`;
+  }
 }
 
 console.log(game());
