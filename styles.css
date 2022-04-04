@@ -16,10 +16,11 @@ body {
 
 .buttons {
   display: flex;
-  gap: 13px;
+  gap: 18px;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  transition: all 0.07s ease;
 }
 
 .btn {
@@ -32,6 +33,11 @@ body {
   -moz-box-shadow: 10px 11px 5px -6px rgba(48, 49, 41, 0.29);
   width: 100px;
   height: 30px;
+}
+
+.btn:hover {
+  background-color: rgb(62, 97, 194);
+  transform: scale(1.1);
 }
 
 .result,
@@ -49,4 +55,9 @@ body {
 .score-container {
   gap: 8px;
   font-size: 20px;
+}
+
+.rules {
+  font-size: 30px;
+  text-align: center;
 }
