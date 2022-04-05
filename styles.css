@@ -20,7 +20,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  transition: all 0.07s ease;
 }
 
 .btn {
@@ -33,6 +32,7 @@ body {
   -moz-box-shadow: 10px 11px 5px -6px rgba(48, 49, 41, 0.29);
   width: 100px;
   height: 30px;
+  transition: all 0.09s ease;
 }
 
 .btn:hover {
