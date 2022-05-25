@@ -3,6 +3,8 @@ const buttons = document.querySelectorAll('button');
 const roundWinnerDiv = document.querySelector('.roundWinner');
 const userScoreDiv = document.querySelector('.userScore');
 const computerScoreDiv = document.querySelector('.computerScore');
+const computerButtons = document.querySelectorAll('.computer');
+
 let userScore = 0;
 let computerScore = 0;
 let draw = 0;
@@ -37,7 +39,19 @@ function playRound(playerSelection, computerSelection) {
     referee = `Choose Your Weapon!`;
   }
   isGameFinished = false;
+
+  computerButtons[rps.indexOf(computerSelection)].classList.add('pressed');
+  setTimeout(function () {
+    computerButtons[rps.indexOf(computerSelection)].classList.remove('pressed');
+  }, 1000);
   return referee;
+}
+
+function pressAnimation(e) {
+  e.target.classList.add('pressed');
+  setTimeout(function () {
+    e.target.classList.remove('pressed');
+  }, 155);
 }
 
 function restartGame() {
@@ -57,12 +71,15 @@ function gameWinner(a, b) {
 
 buttons.forEach((element) => {
   element.addEventListener('click', function (e) {
-    roundWinnerDiv.textContent = playRound(
-      e.target.textContent,
-      computerPlay()
-    );
-    userScoreDiv.textContent = 'Your Score : ' + userScore;
-    computerScoreDiv.textContent = 'Computer Score : ' + computerScore;
-    gameWinner(userScore, computerScore);
+    if (e.target.classList.contains('player')) {
+      pressAnimation(e);
+      roundWinnerDiv.textContent = playRound(
+        e.target.textContent,
+        computerPlay()
+      );
+      userScoreDiv.textContent = 'Your Score : ' + userScore;
+      computerScoreDiv.textContent = 'Computer Score : ' + computerScore;
+      gameWinner(userScore, computerScore);
+    }
   });
 });

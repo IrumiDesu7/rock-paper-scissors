@@ -1,0 +1,65 @@
+:root {
+  --sonicSilver: #757780;
+  --sage: #d2cca1;
+  --ming: #387780;
+  --black: #080705;
+  --redCrayola: #ec0b43;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+* {
+  /* border: 1px solid var(--redCrayola); */
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  background-color: var(--sage);
+  color: var(--sonicSilver);
+}
+
+.button {
+  color: var(--sonicSilver);
+  border: 0;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.results {
+  width: 320px;
+}
+
+.results > * {
+  padding: 3px;
+  font-weight: 550;
+  font-size: 1.1rem;
+}
+
+.roundWinner {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pressed {
+  background-color: var(--ming);
+  color: var(--sage);
+}

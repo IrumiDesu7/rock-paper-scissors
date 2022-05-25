@@ -10,14 +10,29 @@
 </head>
 
 <body>
-  <h1>Rock Paper Scissors</h1>
-  <button>Rock</button>
-  <button>Paper</button>
-  <button>Scissors</button>
-  <div class="results">
-    <div class="roundWinner">Round winner will be shown here</div>
-    <div class="userScore">Your Score : 0</div>
-    <div class="computerScore">Computer Score : 0</div>
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+    <p>Whoever reached 5 before their enemy wins!</p>
+    <div class="buttonContainer">
+      <div class="computerButtons">
+        <h2>Computer</h2>
+        <button class="button computer">Rock</button>
+        <button class="button computer">Paper</button>
+        <button class="button computer">Scissors</button>
+      </div>
+      <h3 style="text-align: center">VS</h3>
+      <div class="userButtons">
+        <button class="button player">Rock</button>
+        <button class="button player">Paper</button>
+        <button class="button player">Scissors</button>
+        <h2>You</h2>
+      </div>
+    </div>
+    <div class="results">
+      <div class="roundWinner">Round winner will be shown here</div>
+      <div class="userScore">Your Score : 0</div>
+      <div class="computerScore">Computer Score : 0</div>
+    </div>
   </div>
   <script src="./app.js"></script>
 </body>
